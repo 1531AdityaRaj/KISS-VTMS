@@ -14,7 +14,7 @@ export default function CreatePracticalPage() {
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [deadline, setDeadline] = useState("2026-09-30T18:00");
+  const [deadline, setDeadline] = useState("2026-11-10T18:00");
   const [maxMarks, setMaxMarks] = useState(80);
   const [isSaving, setIsSaving] = useState(false);
 

@@ -778,14 +778,14 @@ export const initialBatches: Batch[] = [
     courseCode: "VT-3D",
     instructorId: "ins-1",
     instructorName: "Rohit Kumar",
-    startDate: "2026-07-01",
-    endDate: "2026-09-30",
+    startDate: "2026-08-01",
+    endDate: "2026-11-30",
     maxStudents: 30,
     enrolledCount: 24,
     location: "Lab 1 (Advanced Prototyping), KISS Campus",
     status: "ACTIVE",
-    createdAt: "2026-06-15T00:00:00Z",
-    updatedAt: "2026-09-20T00:00:00Z",
+    createdAt: "2026-07-15T00:00:00Z",
+    updatedAt: "2026-11-06T00:00:00Z",
   },
   {
     id: "batch-2",
@@ -796,14 +796,14 @@ export const initialBatches: Batch[] = [
     courseCode: "VT-WEB",
     instructorId: "ins-2",
     instructorName: "Dr. Meera Sen",
-    startDate: "2026-05-01",
-    endDate: "2026-10-31",
+    startDate: "2026-08-01",
+    endDate: "2026-11-30",
     maxStudents: 35,
     enrolledCount: 32,
     location: "Computer Center Lab 3, KISS Campus",
     status: "ACTIVE",
-    createdAt: "2026-04-15T00:00:00Z",
-    updatedAt: "2026-09-20T00:00:00Z",
+    createdAt: "2026-07-15T00:00:00Z",
+    updatedAt: "2026-11-06T00:00:00Z",
   },
   {
     id: "batch-3",
@@ -814,14 +814,14 @@ export const initialBatches: Batch[] = [
     courseCode: "VT-ELEC",
     instructorId: "ins-3",
     instructorName: "Alok Behera",
-    startDate: "2026-07-01",
-    endDate: "2026-09-30",
+    startDate: "2026-08-01",
+    endDate: "2026-11-30",
     maxStudents: 25,
     enrolledCount: 22,
     location: "Electrical Workshop Bay 2",
     status: "ACTIVE",
-    createdAt: "2026-06-15T00:00:00Z",
-    updatedAt: "2026-09-20T00:00:00Z",
+    createdAt: "2026-07-15T00:00:00Z",
+    updatedAt: "2026-11-06T00:00:00Z",
   },
 ];
 
@@ -840,11 +840,11 @@ export const initialEnrollments: Enrollment[] = [
     batchCode: "VT-3D-2026-04",
     instructorName: "Rohit Kumar",
     status: "ACTIVE",
-    enrolledAt: "2026-07-01",
+    enrolledAt: "2026-08-01",
     progressPercentage: 78,
     grade: "A",
     finalScore: 81,
-    completionDate: "2026-09-24",
+    completionDate: "2026-11-06",
   },
   {
     id: "enr-2",
@@ -921,11 +921,15 @@ export const initialEnrollments: Enrollment[] = [
 ];
 
 export const initialAttendanceRecords: AttendanceRecord[] = [
-  { id: "att-1", sessionId: "sess-1", studentId: "st-1", studentName: "Aditya Raj", studentCode: "KISS-ST-2026-001", date: "2026-09-24", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
-  { id: "att-2", sessionId: "sess-1", studentId: "st-2", studentName: "Priya Sharma", studentCode: "KISS-ST-2026-002", date: "2026-09-24", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
-  { id: "att-3", sessionId: "sess-1", studentId: "st-3", studentName: "Rahul Das", studentCode: "KISS-ST-2026-003", date: "2026-09-24", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "ABSENT", remarks: "Medical leave" },
-  { id: "att-4", sessionId: "sess-1", studentId: "st-4", studentName: "Sneha Patnaik", studentCode: "KISS-ST-2026-004", date: "2026-09-24", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
-  { id: "att-5", sessionId: "sess-1", studentId: "st-5", studentName: "Bikash Nayak", studentCode: "KISS-ST-2026-005", date: "2026-09-24", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "LATE", remarks: "10 mins late" },
+  { id: "att-1", sessionId: "sess-1", studentId: "st-1", studentName: "Aditya Raj", studentCode: "KISS-ST-2026-001", date: "2026-11-06", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "PRESENT", remarks: "Attended full session" },
+  { id: "att-2", sessionId: "sess-1", studentId: "st-2", studentName: "Priya Sharma", studentCode: "KISS-ST-2026-002", date: "2026-11-06", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
+  { id: "att-3", sessionId: "sess-1", studentId: "st-3", studentName: "Rahul Das", studentCode: "KISS-ST-2026-003", date: "2026-11-06", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "ABSENT", remarks: "Medical leave" },
+  { id: "att-4", sessionId: "sess-1", studentId: "st-4", studentName: "Sneha Patnaik", studentCode: "KISS-ST-2026-004", date: "2026-11-06", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
+  { id: "att-5", sessionId: "sess-1", studentId: "st-5", studentName: "Bikash Nayak", studentCode: "KISS-ST-2026-005", date: "2026-11-06", sessionNumber: 24, courseId: "course-1", batchId: "batch-1", status: "LATE", remarks: "10 mins late" },
+  { id: "att-6", sessionId: "sess-2", studentId: "st-1", studentName: "Aditya Raj", studentCode: "KISS-ST-2026-001", date: "2026-11-05", sessionNumber: 23, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
+  { id: "att-7", sessionId: "sess-3", studentId: "st-1", studentName: "Aditya Raj", studentCode: "KISS-ST-2026-001", date: "2026-11-04", sessionNumber: 22, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
+  { id: "att-8", sessionId: "sess-4", studentId: "st-1", studentName: "Aditya Raj", studentCode: "KISS-ST-2026-001", date: "2026-11-03", sessionNumber: 21, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
+  { id: "att-9", sessionId: "sess-5", studentId: "st-1", studentName: "Aditya Raj", studentCode: "KISS-ST-2026-001", date: "2026-11-02", sessionNumber: 20, courseId: "course-1", batchId: "batch-1", status: "PRESENT" },
 ];
 
 export const initialTimetable: TimetableEntry[] = [
@@ -1008,12 +1012,12 @@ export const initialAssignments: Assignment[] = [
     batchCode: "VT-3D-2026-04",
     instructorId: "ins-1",
     instructorName: "Rohit Kumar",
-    deadline: "2026-09-25T23:59:00Z",
+    deadline: "2026-11-07T23:59:00Z",
     maxMarks: 50,
     attachmentUrl: "https://example.com/gear-specifications.pdf",
     instructions: "1. Follow standard 20-degree pressure angle. 2. Ensure bore diameter matches 8mm shaft. 3. Include keyway.",
     status: "PUBLISHED",
-    createdAt: "2026-09-18T10:00:00Z",
+    createdAt: "2026-11-01T10:00:00Z",
   },
   {
     id: "asg-2",
@@ -1027,10 +1031,10 @@ export const initialAssignments: Assignment[] = [
     batchCode: "VT-3D-2026-04",
     instructorId: "ins-1",
     instructorName: "Rohit Kumar",
-    deadline: "2026-09-28T23:59:00Z",
+    deadline: "2026-11-10T23:59:00Z",
     maxMarks: 30,
     status: "PUBLISHED",
-    createdAt: "2026-09-20T10:00:00Z",
+    createdAt: "2026-11-02T10:00:00Z",
   },
 ];
 
@@ -1042,7 +1046,7 @@ export const initialAssignmentSubmissions: AssignmentSubmission[] = [
     studentId: "st-1",
     studentName: "Aditya Raj",
     studentCode: "KISS-ST-2026-001",
-    submissionDate: "2026-09-22T10:30:00Z",
+    submissionDate: "2026-11-05T10:30:00Z",
     files: [
       { name: "Spur_Gear_24T_SolidWorks.sldprt", url: "#", size: "2.4 MB", type: "application/octet-stream" },
       { name: "Spur_Gear_Print.stl", url: "#", size: "1.1 MB", type: "model/stl" },
@@ -1054,7 +1058,7 @@ export const initialAssignmentSubmissions: AssignmentSubmission[] = [
     marksObtained: 46,
     maxMarks: 50,
     feedback: "Good work! The gear design is accurate and tooth profile is crisp. Try improving your top surface ironing settings for a smoother finish.",
-    gradedAt: "2026-09-23T16:00:00Z",
+    gradedAt: "2026-11-06T09:00:00Z",
     gradedByName: "Rohit Kumar",
   },
 ];
@@ -1072,7 +1076,7 @@ export const initialPracticals: Practical[] = [
     batchCode: "VT-3D-2026-04",
     instructorId: "ins-1",
     instructorName: "Rohit Kumar",
-    deadline: "2026-09-27T18:00:00Z",
+    deadline: "2026-11-08T18:00:00Z",
     maxMarks: 80,
     toolsRequired: ["SolidWorks 2024", "Ultimaker Cura 5.x", "FDM 3D Printer", "Digital Vernier Caliper"],
     instructions: [
@@ -1088,7 +1092,7 @@ export const initialPracticals: Practical[] = [
       { id: "crit-3", name: "Physical Print Quality", maxScore: 30, description: "Layer consistency, bed adhesion and hinge movement" },
       { id: "crit-4", name: "Workshop Safety & Cleanup", maxScore: 10, description: "Safe tool handling and workspace maintenance" },
     ],
-    createdAt: "2026-09-15T00:00:00Z",
+    createdAt: "2026-11-01T00:00:00Z",
   },
 ];
 
@@ -1100,7 +1104,7 @@ export const initialPracticalSubmissions: PracticalSubmission[] = [
     studentId: "st-1",
     studentName: "Aditya Raj",
     studentCode: "KISS-ST-2026-001",
-    submissionDate: "2026-09-21T14:20:00Z",
+    submissionDate: "2026-11-05T14:20:00Z",
     files: [
       { name: "Hinge_Mechanism.stl", url: "#", size: "3.1 MB", type: "model/stl" },
       { name: "Practical_Report_Aditya.pdf", url: "#", size: "1.4 MB", type: "application/pdf" },
@@ -1117,7 +1121,7 @@ export const initialPracticalSubmissions: PracticalSubmission[] = [
       "crit-4": 9,
     },
     feedback: "Outstanding work on tolerance calculation. The pin articulation was smooth on first attempt!",
-    gradedAt: "2026-09-22T17:00:00Z",
+    gradedAt: "2026-11-06T10:30:00Z",
     gradedByName: "Rohit Kumar",
   },
 ];
@@ -1135,7 +1139,7 @@ export const initialAssessments: Assessment[] = [
     batchCode: "VT-3D-2026-04",
     instructorId: "ins-1",
     instructorName: "Rohit Kumar",
-    scheduledDate: "2026-09-26",
+    scheduledDate: "2026-11-08",
     startTime: "10:00 AM",
     durationMinutes: 20,
     totalMarks: 20,
@@ -1143,7 +1147,7 @@ export const initialAssessments: Assessment[] = [
     maxAttempts: 1,
     instructions: "Answer all 5 multiple choice questions. Each question carries 4 marks. You have 20 minutes to complete the test.",
     status: "ACTIVE",
-    createdAt: "2026-09-20T00:00:00Z",
+    createdAt: "2026-11-01T00:00:00Z",
     questions: [
       {
         id: "q-1",
@@ -1217,8 +1221,8 @@ export const initialAssessmentAttempts: AssessmentAttempt[] = [
     studentId: "st-1",
     studentName: "Aditya Raj",
     studentCode: "KISS-ST-2026-001",
-    startTime: "2026-09-24T11:00:00Z",
-    submitTime: "2026-09-24T11:14:30Z",
+    startTime: "2026-11-06T11:00:00Z",
+    submitTime: "2026-11-06T11:14:30Z",
     score: 18,
     totalMarks: 20,
     percentage: 90,
@@ -1258,7 +1262,7 @@ export const initialResults: Result[] = [
     percentage: 90.0,
     grade: "A",
     status: "PASSED",
-    computedAt: "2026-09-24T12:00:00Z",
+    computedAt: "2026-11-06T12:00:00Z",
   },
 ];
 
@@ -1274,17 +1278,17 @@ export const initialCertificates: Certificate[] = [
     courseCode: "VT-3D",
     batchId: "batch-1",
     batchCode: "VT-3D-2026-04",
-    duration: "3 Months (July 2026 – September 2026)",
-    completionDate: "2026-09-24",
-    issueDate: "2026-09-24",
+    duration: "3 Months (August 2026 – November 2026)",
+    completionDate: "2026-11-06",
+    issueDate: "2026-11-06",
     qrCodeUrl: "",
     verificationUrl: "http://localhost:3000/verify/KISS-VT-2026-000421",
     status: "ISSUED",
-    instructorApprovedAt: "2026-09-23T14:00:00Z",
-    adminApprovedAt: "2026-09-24T10:00:00Z",
+    instructorApprovedAt: "2026-11-05T14:00:00Z",
+    adminApprovedAt: "2026-11-06T10:00:00Z",
     signatoryName: "Prof. S. Samanta, Director (Academics & Placement)",
     instructorName: "Rohit Kumar, Senior Instructor",
-    createdAt: "2026-09-24T10:00:00Z",
+    createdAt: "2026-11-06T10:00:00Z",
   },
 ];
 
@@ -1297,7 +1301,7 @@ export const initialAnnouncements: Announcement[] = [
     authorName: "Placement Cell, KISS",
     audience: "ALL",
     priority: "IMPORTANT",
-    createdAt: "2026-09-22T09:00:00Z",
+    createdAt: "2026-11-05T09:00:00Z",
   },
   {
     id: "ann-2",
@@ -1308,17 +1312,17 @@ export const initialAnnouncements: Announcement[] = [
     audience: "BATCH",
     batchId: "batch-1",
     priority: "NORMAL",
-    createdAt: "2026-09-23T11:30:00Z",
+    createdAt: "2026-11-05T11:30:00Z",
   },
   {
     id: "ann-3",
     title: "Final Assessment Schedule Released",
-    content: "The final theory and practical evaluations for Q3 vocational cohorts will be held between 26th and 29th September. Please check your dashboard for individual timings.",
+    content: "The final theory and practical evaluations for Q4 vocational cohorts will be held between 8th and 12th November. Please check your dashboard for individual timings.",
     authorId: "user-admin-1",
     authorName: "Academics Office",
     audience: "STUDENTS",
     priority: "URGENT",
-    createdAt: "2026-09-24T08:00:00Z",
+    createdAt: "2026-11-06T08:00:00Z",
   },
 ];
 
@@ -1331,7 +1335,7 @@ export const initialNotifications: Notification[] = [
     type: "SUCCESS",
     isRead: false,
     link: "/student/certificates",
-    createdAt: "2026-09-24T10:05:00Z",
+    createdAt: "2026-11-06T10:05:00Z",
   },
   {
     id: "notif-2",
@@ -1341,17 +1345,17 @@ export const initialNotifications: Notification[] = [
     type: "INFO",
     isRead: true,
     link: "/student/practicals",
-    createdAt: "2026-09-22T17:05:00Z",
+    createdAt: "2026-11-06T09:05:00Z",
   },
   {
     id: "notif-3",
     userId: "user-student-1",
     title: "Upcoming Theory Assessment",
-    message: "SolidWorks & Additive Manufacturing assessment starts on 26 Sep at 10:00 AM.",
+    message: "SolidWorks & Additive Manufacturing assessment starts on 8 Nov at 10:00 AM.",
     type: "WARNING",
     isRead: true,
     link: "/student/assessments",
-    createdAt: "2026-09-20T10:00:00Z",
+    createdAt: "2026-11-05T10:00:00Z",
   },
 ];
 
@@ -1365,7 +1369,7 @@ export const initialAuditLogs: AuditLog[] = [
     entity: "Certificate",
     entityId: "cert-1",
     metadata: { certificateId: "KISS-VT-2026-000421", studentName: "Aditya Raj", course: "3D Printing & CAD" },
-    timestamp: "2026-09-24T10:00:00Z",
+    timestamp: "2026-11-06T10:00:00Z",
   },
   {
     id: "log-2",
@@ -1376,7 +1380,7 @@ export const initialAuditLogs: AuditLog[] = [
     entity: "Student",
     entityId: "st-1",
     metadata: { score: 81, attendance: 87, progress: 78 },
-    timestamp: "2026-09-23T14:00:00Z",
+    timestamp: "2026-11-05T14:00:00Z",
   },
   {
     id: "log-3",
@@ -1387,7 +1391,7 @@ export const initialAuditLogs: AuditLog[] = [
     entity: "AttendanceSession",
     entityId: "sess-1",
     metadata: { batchCode: "VT-3D-2026-04", present: 22, absent: 1, late: 1 },
-    timestamp: "2026-09-24T09:45:00Z",
+    timestamp: "2026-11-06T09:45:00Z",
   },
 ];
 

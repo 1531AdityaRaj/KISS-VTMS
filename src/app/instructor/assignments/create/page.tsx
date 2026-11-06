@@ -14,7 +14,7 @@ export default function CreateAssignmentPage() {
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [deadline, setDeadline] = useState("2026-09-30T23:59");
+  const [deadline, setDeadline] = useState("2026-11-10T23:59");
   const [maxMarks, setMaxMarks] = useState(50);
   const [instructions, setInstructions] = useState("");
   const [isSaving, setIsSaving] = useState(false);

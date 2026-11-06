@@ -196,7 +196,7 @@ export default async function StudentDashboardPage() {
               <span className="text-3xl font-serif font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
                 {assessments.length}
               </span>
-              <span className="text-xs font-semibold text-blue-700">Next: 26 Sep</span>
+              <span className="text-xs font-semibold text-blue-700">Next: 8 Nov</span>
             </div>
             <p className="text-xs font-semibold text-emerald-800 mt-2 flex items-center gap-1 group-hover:underline">
               <span>Prepare for test</span>
@@ -326,7 +326,7 @@ export default async function StudentDashboardPage() {
                   <p className="text-xs text-slate-600">Module 3 - SolidWorks & Additive Mfg</p>
                   <p className="text-[11px] text-slate-400 flex items-center gap-1">
                     <Clock className="w-3 h-3 text-blue-600" />
-                    26 Sep 2026, 10:00 AM
+                    8 Nov 2026, 10:00 AM
                   </p>
                 </div>
                 <Link
@@ -349,7 +349,7 @@ export default async function StudentDashboardPage() {
                   <p className="text-xs text-slate-600">3D Printer Operation & Z-Offset Lab</p>
                   <p className="text-[11px] text-slate-400 flex items-center gap-1">
                     <Clock className="w-3 h-3 text-emerald-600" />
-                    30 Sep 2026, 9:30 AM • Lab 1
+                    Today, 6 Nov 2026, 9:30 AM • Lab 1
                   </p>
                 </div>
                 <span className="text-xs font-semibold text-emerald-700 py-1.5 flex items-center gap-1">

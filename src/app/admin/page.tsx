@@ -41,6 +41,8 @@ export default function AdminDashboardPage() {
     { month: "Jul", attendance: 84 },
     { month: "Aug", attendance: 89 },
     { month: "Sep", attendance: 87 },
+    { month: "Oct", attendance: 91 },
+    { month: "Nov", attendance: 93 },
   ];
 
   return (

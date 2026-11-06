@@ -13,7 +13,7 @@ export default function CreateAssessmentPage() {
   const user = db.users.getById(instructor.userId)!;
 
   const [title, setTitle] = useState("");
-  const [scheduledDate, setScheduledDate] = useState("2026-09-28");
+  const [scheduledDate, setScheduledDate] = useState("2026-11-08");
   const [durationMinutes, setDurationMinutes] = useState(25);
   const [totalMarks, setTotalMarks] = useState(20);
   const [passingMarks, setPassingMarks] = useState(10);

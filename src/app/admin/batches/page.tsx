@@ -17,8 +17,8 @@ export default function AdminBatchesPage() {
 
   const [name, setName] = useState("");
   const [code, setCode] = useState("");
-  const [startDate, setStartDate] = useState("2026-10-01");
-  const [endDate, setEndDate] = useState("2026-12-31");
+  const [startDate, setStartDate] = useState("2026-11-01");
+  const [endDate, setEndDate] = useState("2027-01-31");
   const [location, setLocation] = useState("Lab 2, KISS Campus");
 
   const handleCreateBatch = (e: React.FormEvent) => {

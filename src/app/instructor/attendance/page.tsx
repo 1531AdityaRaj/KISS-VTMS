@@ -19,7 +19,7 @@ export default function InstructorAttendancePage() {
   const user = db.users.getById(instructor.userId)!;
 
   const [selectedBatch, setSelectedBatch] = useState("batch-1");
-  const [selectedDate, setSelectedDate] = useState("2026-09-24");
+  const [selectedDate, setSelectedDate] = useState("2026-11-06");
   const [attendanceState, setAttendanceState] = useState<Record<string, AttendanceStatus>>({
     "st-1": "PRESENT",
     "st-2": "PRESENT",

@@ -115,7 +115,7 @@ export default function AssignmentDetailsPage({
             </div>
             <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-700 bg-rose-50 px-3 py-1.5 rounded-xl border border-rose-200 w-fit">
               <Clock className="w-3.5 h-3.5" />
-              <span>Due: 25 Sep 2026, 11:59 PM</span>
+              <span>Due: 7 Nov 2026, 11:59 PM</span>
             </div>
           </div>
 
@@ -214,7 +214,7 @@ export default function AssignmentDetailsPage({
 
               <div className="space-y-1.5 text-xs text-slate-500 pt-1">
                 <p>
-                  <strong className="text-slate-700">Submitted on:</strong> 22 Sep 2026, 10:30 AM
+                  <strong className="text-slate-700">Submitted on:</strong> 5 Nov 2026, 10:30 AM
                 </p>
                 <p>
                   <strong className="text-slate-700">Files:</strong> {uploadedFiles.length}
