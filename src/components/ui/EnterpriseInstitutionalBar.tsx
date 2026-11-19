@@ -91,8 +91,14 @@ export function EnterpriseInstitutionalBar({ onOpenCommandPalette }: EnterpriseB
 
       {/* Enterprise System Telemetry & Health Modal */}
       {telemetryOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150">
-          <div className="bg-slate-900 text-slate-100 border border-slate-700/80 rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden font-sans">
+        <div
+          onClick={() => setTelemetryOpen(false)}
+          className="fixed inset-0 z-[100] bg-slate-950/75 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-150"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-slate-900 text-slate-100 border border-slate-700/80 rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden font-sans relative z-[101]"
+          >
             {/* Header */}
             <div className="p-4 sm:p-5 bg-slate-800/80 border-b border-slate-700 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
@@ -220,3 +226,4 @@ export function EnterpriseInstitutionalBar({ onOpenCommandPalette }: EnterpriseB
     </>
   );
 }
+
