@@ -27,6 +27,8 @@ import {
 import { User, UserRole, Notification } from "@/types";
 import { logoutAction, demoLoginAction } from "@/features/auth/auth-actions";
 import { NayiDishaLogo } from "@/components/ui/NayiDishaLogo";
+import { EnterpriseInstitutionalBar } from "@/components/ui/EnterpriseInstitutionalBar";
+import { CommandPalette } from "@/components/ui/CommandPalette";
 
 interface AppShellProps {
   user: User;
@@ -50,6 +52,7 @@ export function AppShell({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [unreadNotifs, setUnreadNotifs] = useState(notifications);
+  const [cmdOpen, setCmdOpen] = useState(false);
 
   const role = user.role;
 
@@ -252,6 +255,10 @@ export function AppShell({
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
+        {/* Enterprise Institutional Status Bar */}
+        <EnterpriseInstitutionalBar onOpenCommandPalette={() => setCmdOpen(true)} />
+        <CommandPalette isOpen={cmdOpen} onClose={() => setCmdOpen(false)} />
+
         {/* Top Header */}
         <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200/90 h-16 px-4 sm:px-6 flex items-center justify-between gap-4 shadow-2xs">
           <div className="flex items-center gap-3">
@@ -262,15 +269,20 @@ export function AppShell({
               <Menu className="w-5 h-5" />
             </button>
 
-            {/* Institutional Search Bar */}
-            <div className="relative hidden sm:block w-72 md:w-96">
-              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search courses, modules, records..."
-                className="w-full pl-9 pr-4 py-1.5 text-xs bg-slate-50 hover:bg-slate-100/80 focus:bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-700/20 focus:border-emerald-700 transition-all placeholder:text-slate-400"
-              />
-            </div>
+            {/* Institutional Search Bar / Quick Nav Trigger */}
+            <button
+              type="button"
+              onClick={() => setCmdOpen(true)}
+              className="relative hidden sm:flex items-center w-72 md:w-96 text-left cursor-pointer group"
+            >
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 group-hover:text-emerald-700 transition-colors" />
+              <div className="w-full pl-9 pr-14 py-1.5 text-xs bg-slate-50 hover:bg-slate-100/90 border border-slate-200 rounded-xl text-slate-500 flex items-center justify-between shadow-2xs">
+                <span>Quick Search / Jump to...</span>
+                <kbd className="bg-white border border-slate-200 text-slate-400 px-1.5 py-0.5 rounded text-[10px] font-mono shadow-2xs">
+                  Ctrl K
+                </kbd>
+              </div>
+            </button>
           </div>
 
           {/* Right Header Badges & Actions */}

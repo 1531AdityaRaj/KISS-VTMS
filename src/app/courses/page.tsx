@@ -61,10 +61,19 @@ export default function CoursesCatalogPage() {
                     <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold">
                       {course.skillLevel}
                     </span>
+                    <span>•</span>
+                    <span className="text-slate-600 bg-slate-100 px-2 py-0.5 rounded text-[10px] font-mono font-bold">
+                      NSQF L4
+                    </span>
                   </div>
 
                   <h3 className="font-serif font-bold text-lg text-slate-900 leading-snug">{course.title}</h3>
                   <p className="text-xs text-slate-600 line-clamp-3">{course.description}</p>
+
+                  <div className="pt-1 flex items-center gap-1.5 text-[10px] text-slate-500 font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span>Govt. Affiliation: NCVET / PMKVY 4.0</span>
+                  </div>
                 </div>
               </div>
 

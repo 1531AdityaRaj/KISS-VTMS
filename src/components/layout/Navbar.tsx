@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ShieldCheck, Menu, X, ArrowRight } from "lucide-react";
+import { ShieldCheck, Menu, X, ArrowRight, Command } from "lucide-react";
 import { NayiDishaLogo } from "@/components/ui/NayiDishaLogo";
+import { EnterpriseInstitutionalBar } from "@/components/ui/EnterpriseInstitutionalBar";
+import { CommandPalette } from "@/components/ui/CommandPalette";
 
 export function TopInstitutionalHeader() {
   return (
@@ -98,9 +100,12 @@ export function TopInstitutionalHeader() {
 
 export function PublicNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cmdOpen, setCmdOpen] = useState(false);
 
   return (
     <>
+      <EnterpriseInstitutionalBar onOpenCommandPalette={() => setCmdOpen(true)} />
+      <CommandPalette isOpen={cmdOpen} onClose={() => setCmdOpen(false)} />
       <TopInstitutionalHeader />
       <header className="sticky top-0 z-50 bg-[#073d27]/95 backdrop-blur-md text-white shadow-lg border-b border-emerald-800/60 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
