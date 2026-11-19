@@ -1,34 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { PublicNavbar } from "@/components/layout/Navbar";
-import { initialCourses, initialCategories } from "@/lib/db/mock-data";
-import { Clock, Award, BookOpen, ArrowRight, CheckCircle2, Search, Sparkles } from "lucide-react";
+import { initialCourses } from "@/lib/db/mock-data";
+import { Clock, Award, ArrowRight, Sparkles } from "lucide-react";
 import { CourseThumbnail } from "@/components/ui/CourseThumbnail";
 
 export default function CoursesCatalogPage() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredCourses = initialCourses.filter((course) => {
-    const matchesCategory =
-      selectedCategory === "all" ||
-      (() => {
-        const cat = initialCategories.find((c) => c.slug === selectedCategory);
-        return cat ? course.categoryId === cat.id : true;
-      })();
-
-    const matchesSearch =
-      searchQuery.trim() === "" ||
-      course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      course.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (course.categoryName && course.categoryName.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      course.description.toLowerCase().includes(searchQuery.toLowerCase());
-
-    return matchesCategory && matchesSearch;
-  });
-
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <PublicNavbar />
@@ -48,49 +27,9 @@ export default function CoursesCatalogPage() {
           </p>
         </div>
 
-        {/* Search Input */}
-        <div className="max-w-md mx-auto relative">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search electives (e.g. Electrical, Welding, Solar, Python)..."
-            className="w-full pl-10 pr-4 py-2.5 text-sm bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-600 shadow-sm"
-          />
-        </div>
-
-        {/* Categories Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 max-w-6xl mx-auto">
-          <button
-            onClick={() => setSelectedCategory("all")}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
-              selectedCategory === "all"
-                ? "bg-[#0b4f34] text-white shadow-sm"
-                : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
-            }`}
-          >
-            All Electives ({initialCourses.length})
-          </button>
-          {initialCategories.map((cat, idx) => (
-            <button
-              key={cat.id}
-              onClick={() => setSelectedCategory(cat.slug)}
-              className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex items-center gap-1.5 ${
-                selectedCategory === cat.slug
-                  ? "bg-[#0b4f34] text-white shadow-sm font-semibold"
-                  : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
-              }`}
-            >
-              <span className="text-[10px] opacity-70 font-mono font-bold">{idx + 1}.</span>
-              <span>{cat.name}</span>
-            </button>
-          ))}
-        </div>
-
         {/* Electives Course Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
-          {filteredCourses.map((course) => (
+          {initialCourses.map((course) => (
             <div
               key={course.id}
               className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
